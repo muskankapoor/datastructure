@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//two strings are perfumations
+//same length
+
+
+string sortstring(string str){
+  //string new_string = "";
+  sort(str.begin(), str.end()); 
+  return str; 
+}
+
+
+bool isperfumtation(string old_str1, string old_str2){
+  string str1 =  sortstring(old_str1);
+  string  str2 =  sortstring(old_str2);
+
+  while(!str1.length()){
+    int i = 0;
+    //int j = 0;
+    if (str1[i]!=str2[i]){
+      return false;
+    }
+  }
+  cout << "isperfumtation" << endl;
+  return true;
+  
+}
+
+  
+  
+int main(){
+  
+  cout << isperfumtation("bac", "bag");
+  //cout << sortstring("bac");
+		     
+}
+    
