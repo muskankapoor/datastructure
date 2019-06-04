@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+struct node{
+  int data;
+  struct Node *next;
+
+};
+
+
+void reverse(Node *head){
+  
+  if (head==NULL){
+    return;
+  }
+
+  reverse(head->next);
+  cout << " " << head->data;
+}
+
+
+int main()  
+{  
+  Node* head = NULL;  
+      
+  /* Using push() to construct below list  
+     1->2->3->4->5 */
+  push(&head, 5);  
+  push(&head, 4);  
+  push(&head, 3);  
+  push(&head, 2);  
+  push(&head, 1);  
+      
+  cout<<"Output of fun1() for reversing list 1->2->3->4->5 \n";  
+  fun1(head);  
+       
+  
+  return 0;  
+}  
