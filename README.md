@@ -1,2 +1,3 @@
 # datastructure
-This repo has data structures code. For projects please check the compsciprojects2019 repo
+This repo has data structures code.
+For projects please check my other repos that have different topics
