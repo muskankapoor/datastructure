@@ -28,12 +28,14 @@ class BST
 
     node* insert(int x, node* t)
     {
+      //inserting in empty tree
         if(t == NULL)
         {
             t = new node;
             t->data = x;
             t->left = t->right = NULL;
         }
+	//insert to let side 
         else if(x < t->data)
             t->left = insert(x, t->left);
         else if(x > t->data)
@@ -43,6 +45,8 @@ class BST
 
     node* findMin(node* t)
     {
+
+      // left side has mind
         if(t == NULL)
             return NULL;
         else if(t->left == NULL)
@@ -53,6 +57,7 @@ class BST
 
     node* findMax(node* t)
     {
+      // right side has max 
         if(t == NULL)
             return NULL;
         else if(t->right == NULL)
@@ -63,6 +68,7 @@ class BST
 
     node* remove(int x, node* t)
     {
+      //no child, one child, two child 
         node* temp;
         if(t == NULL)
             return NULL;
@@ -89,6 +95,8 @@ class BST
         return t;
     }
 
+
+  // left root right
     void inorder(node* t)
     {
         if(t == NULL)
@@ -98,6 +106,7 @@ class BST
         inorder(t->right);
     }
 
+  
     node* find(node* t, int x)
     {
         if(t == NULL)
